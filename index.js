@@ -24,6 +24,6 @@ const questions = [
   {
     type:"input",
     name:"shape",
-    message:"ENTER SHAPE COLOR: Please enter the color inside the shape : ",
+    message:"ENTER SHAPE COLOR: Please enter the color inside the shape you choose : ",
   }
 ];
