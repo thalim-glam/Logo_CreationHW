@@ -29,6 +29,26 @@ const questions = [
   }
 ];
 
+// User answers prompt
+const answers = await inquirer.createPromptModule(questions);
+
+// Text must be 3 chars
+const userText = "";
+if(answers.text.length > 0 && answers.text.length < 4)
+{
+  userText = answers.text;
+}else{
+  console.log("Invalid input. Please enter no more than 3 characters");
+  return;
+}
+console.log("User input text : " + userText);
+
+// Text color ---------------------------------- Not done--------------------------------------
+
+// Shape selection
+
+
+
 function writeToFile(fileName, data){
   console.log("Writing [" + data + "] to file [" + fileName + "]")
   FileSystem.writeToFile(fileName, data, function(err){
@@ -38,3 +58,10 @@ function writeToFile(fileName, data){
 
   });
 }
+
+async function init(){
+
+// ------------------------------------------------------------------could not finish
+
+}
+
