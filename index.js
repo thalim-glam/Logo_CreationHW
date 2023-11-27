@@ -85,3 +85,13 @@ async function init(){
 
 }
 
+const svg = new SVG();
+svg.setTextEl(userText, user_font_color);
+svg.setShapeEl(userShape);
+svgString = svg.render();
+
+console.log("Final Shape:\n\n" + svgString); // Final logo
+console.log("Shape Complete");
+console.log("Writing shape to the svg file");
+
+init();
