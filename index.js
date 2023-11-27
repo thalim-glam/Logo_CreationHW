@@ -46,8 +46,28 @@ console.log("User input text : " + userText);
 // Text color ---------------------------------- Not done--------------------------------------
 
 // Shape selection
+const userShape = "";
+const user_shape = "";
+if(user_shape === "Square" || user_shape === "square")
+{
+  userShape = new Square();
+  console.log(" User selection is Square shape");
+}
+else if(user_shape === "Circle" || user_shape === "circle")
+{
+  userShape = new Circle();
+  console.log(" User selection is Circle shape");
+}
+else if(user_shape === "Triangle" || user_shape === "triangle")
+{
+  userShape = new Triangle();
+  console.log(" User selection is Triangle shape");
+}
+else{
+  console.log(" invalid Entry! Please choose a shape from the choices.");
+}
 
-
+//----------------------- Shape color ---------------- not done yet --------------------------------
 
 function writeToFile(fileName, data){
   console.log("Writing [" + data + "] to file [" + fileName + "]")
