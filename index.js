@@ -31,4 +31,10 @@ const questions = [
 
 function writeToFile(fileName, data){
   console.log("Writing [" + data + "] to file [" + fileName + "]")
+  FileSystem.writeToFile(fileName, data, function(err){
+    if(err)
+    { return console.log(err);}
+    console.log("Success!! A new logo.svg is being generated.")
+
+  });
 }
