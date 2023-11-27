@@ -4,6 +4,7 @@ const{Circle, Square, Triangle} = require("./lib/shapes")
 const inquirer = require("inquirer")
 const fs = require("fs")
 
+// User Questions
 const questions = [
   {
     type:"input",
@@ -24,6 +25,10 @@ const questions = [
   {
     type:"input",
     name:"shape",
-    message:"ENTER SHAPE COLOR: Please enter the color inside the shape you choose : ",
+    message:"ENTER SHAPE COLOR: Please enter the color inside the shape : ",
   }
 ];
+
+function writeToFile(fileName, data){
+  console.log("Writing [" + data + "] to file [" + fileName + "]")
+}
