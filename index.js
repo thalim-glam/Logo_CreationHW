@@ -29,6 +29,9 @@ const questions = [
   }
 ];
 
+
+//--------------------------------------------------------------------------------------------------------------------------
+
 // User answers prompt
 const answers = await inquirer.createPromptModule(questions);
 
@@ -69,21 +72,6 @@ else{
 
 //----------------------- Shape color ---------------- not done yet --------------------------------
 
-function writeToFile(fileName, data){
-  console.log("Writing [" + data + "] to file [" + fileName + "]")
-  FileSystem.writeToFile(fileName, data, function(err){
-    if(err)
-    { return console.log(err);}
-    console.log("Success!! A new logo.svg is being generated.")
-
-  });
-}
-
-async function init(){
-
-// ------------------------------------------------------------------could not finish
-
-}
 
 const svg = new SVG();
 svg.setTextEl(userText, user_font_color);
@@ -93,5 +81,17 @@ svgString = svg.render();
 console.log("Final Shape:\n\n" + svgString); // Final logo
 console.log("Shape Complete");
 console.log("Writing shape to the svg file");
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+function writeToFile(fileName, data){
+  console.log("Writing [" + data + "] to file [" + fileName + "]")
+  FileSystem.writeToFile(fileName, data, function(err){
+    if(err)
+    { return console.log(err);}
+    console.log("Success!! A new logo.svg is being generated.")
+
+  });
+}
 
 init();
