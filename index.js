@@ -1,6 +1,6 @@
 const SVG = require("./lib/SVG")
 const { Circle, Square, Triangle } = require("./lib/shapes")
-
+const path = require("path")
 const inquirer = require("inquirer")
 const fs = require("fs")
 
@@ -13,12 +13,12 @@ const questions = [
   },
   {
     type: "input",
-    name: "text-color",
+    name: "textcolor",
     message: "ENTER TEXT COLOR: Please enter the color of your text : ",
   },
   {
     type: "list",
-    name: "pix-image",
+    name: "piximage",
     message: "ENTER SHAPE: Please choose a shape for your image : ",
     choices: ["Square", "Circle", "Triangle"],
   },
@@ -30,14 +30,7 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-  console.log("Writing [" + data + "] to file [" + fileName + "]");
-  const content = generateLogo(data);
-
-  fs.writeToFile(fileName, content, function (error) {
-    if (error) { return console.log(error); }
-    console.log("Success!! A new logo.svg is being generated.")
-
-  });
+fs.writeFileSync(path.join(fileName), data)
 }
 
 //--------------------------------------------------------------------------------------------------------------------------
@@ -45,36 +38,36 @@ function writeToFile(fileName, data) {
 // User answers prompt
 //const answers = await inquirer.createPromptModule(questions);
 
-// Text must be 3 chars
-const userText = "";
-if (answers.text.length > 0 && answers.text.length < 4) {
-  userText = answers.text;
-} else {
-  console.log("Invalid input. Please enter no more than 3 characters");
-  return;
-}
-console.log("User input text : " + userText);
+// // Text must be 3 chars
+// const userText = "";
+// if (answers.text.length > 0 && answers.text.length < 4) {
+//   userText = answers.text;
+// } else {
+//   console.log("Invalid input. Please enter no more than 3 characters");
+//   return;
+// }
+// console.log("User input text : " + userText);
 
-// Text color ---------------------------------- Not done--------------------------------------
+// // Text color ---------------------------------- Not done--------------------------------------
 
-// Shape selection
-const userShape = "";
-const user_shape = "";
-if (user_shape === "Square" || user_shape === "square") {
-  userShape = new Square();
-  console.log(" User selection is Square shape");
-}
-else if (user_shape === "Circle" || user_shape === "circle") {
-  userShape = new Circle();
-  console.log(" User selection is Circle shape");
-}
-else if (user_shape === "Triangle" || user_shape === "triangle") {
-  userShape = new Triangle();
-  console.log(" User selection is Triangle shape");
-}
-else {
-  console.log(" invalid Entry! Please choose a shape from the choices.");
-}
+// // Shape selection
+// const userShape = "";
+// const user_shape = "";
+// if (user_shape === "Square" || user_shape === "square") {
+//   userShape = new Square();
+//   console.log(" User selection is Square shape");
+// }
+// else if (user_shape === "Circle" || user_shape === "circle") {
+//   userShape = new Circle();
+//   console.log(" User selection is Circle shape");
+// }
+// else if (user_shape === "Triangle" || user_shape === "triangle") {
+//   userShape = new Triangle();
+//   console.log(" User selection is Triangle shape");
+// }
+// else {
+//   console.log(" invalid Entry! Please choose a shape from the choices.");
+// }
 
 //----------------------- Shape color ---------------- not done yet --------------------------------
 // const svg = new SVG();
@@ -89,10 +82,30 @@ else {
 //----------------------------------------------------------------------------------------------------------------------------------------
 
 function init() {
-  inquirer.createPromptModule(questions)
+  inquirer.prompt(questions)
     .then(function (data) {
-      const fileName = 'logo.svg';
-      writeToFile(fileName, data);
+      let shapechoice;
+      switch (data.piximage) {
+        case "Square":
+          shapechoice = new Square()
+          break;
+        case "Circle":
+          shapechoice = new Circle()
+          break;
+        case "Triangle":
+          shapechoice = new Triangle()
+          break;
+      }
+      shapechoice.setColor(data.shape)
+      const mySvg = new SVG()
+      mySvg.setShape(shapechoice)
+      mySvg.setText(data.text, data.textcolor)
+      if(data.text.length > 3 ){
+        console.log("Maximum 3 characters")
+        init()
+      }else{
+      writeToFile("./example/logo.svg", mySvg.render());
+    }
     });
 }
 
