@@ -43,7 +43,7 @@ function writeToFile(fileName, data) {
 //--------------------------------------------------------------------------------------------------------------------------
 
 // User answers prompt
-const answers = await inquirer.createPromptModule(questions);
+//const answers = await inquirer.createPromptModule(questions);
 
 // Text must be 3 chars
 const userText = "";
