@@ -1,1 +1,1 @@
-<svg width="300" height="200" ><polygon points="150,18 244,180 56,180" stroke="black" stroke-width="2" fill="Pink" /><text x="150" y="125" font-size="40" text-anchor="middle" fill="Blue">WWW</text></svg>
+<svg width="300" height="200"><rect x="50" y="5" width="200" height="190" stroke="black" stroke-width="2" fill="white" /><circle cx="150" cy="100" r="80" stroke="black" stroke-width="2" fill="green" /><text x="150" y="120" font-size="60" text-anchor="middle" fill="White">SVG</text></svg>
