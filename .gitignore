@@ -1,7 +1,9 @@
+node_modules
+package-lock.json
+.vscode
 .DS_Store
-DS_Store
-# .node_modules
-# node_modules
+.gitignore
+.node_modules
 
 # Logs
 logs
