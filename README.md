@@ -15,22 +15,24 @@
   ## Usage
   This application can be used to create Professional README pages for different homeworks / projects.
   Here are the sample screenshots....
+  - Screenshot: Walkthrough Video
+![Screenshot of Walkthrough Video](./images/Walkthrough_Vid.gif)
 - Screenshot : Initial Pages
 ![Screenshot of Initial page](./images/Initial_page.png)
 - Screenshot : NPM TEST failed 
-![Screenshot of GIF version](./images/Failed_npmTest.png)
+![Screenshot of NPM TEST failed](./images/Failed_npmTest.png)
 - Screenshot: NPM TEST Passed
-![Screenshot of Walkthrough Video](./images/Passed_npmTest.png)
+![Screenshot of NPM TEST Passed](./images/Passed_npmTest.png)
 - Screenshot : Square Logo
-![Screenshot of Initial page](./images/Square_logo.png)
+![Screenshot of Square Logo](./images/Square_logo.png)
 - Screenshot : Circle Logo
-![Screenshot of GIF version](./images/Circle_logo.png)
+![Screenshot of Circle Logo](./images/Circle_logo.png)
 - Screenshot: Triangle Logo
-![Screenshot of Walkthrough Video](./images/Triangle_logo.png)
+![Screenshot of Triangle Logo](./images/Triangle_logo.png)
 
   ## Credits
   
-  All the credit belongs to me, the Tutor who helped me and our instructor who explained this very confusing challenge in a much simpler way.
+  Credits goes to me, the Tutor who helped me and our instructor who explained this challenge in a much simpler way.
   
   ## License
   ![Github license](https://img.shields.io/badge/license-MIT-blue.svg) 
