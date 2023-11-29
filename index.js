@@ -59,7 +59,7 @@ function init() {
         console.log("Maximum 3 characters")
         init()
       } else {
-        writeToFile("./example/circle.svg", mySvg.render());
+        writeToFile("./example/sample.svg", mySvg.render());
       }
     });
 }
