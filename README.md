@@ -14,8 +14,8 @@
   For installation, please install jest and use node and npm to test the code.
   ## Usage
   This application can be used to create Professional README pages for different homeworks / projects.
-  - Here are the sample screenshots....
-  - Screenshot: Walkthrough Video
+  - Here are the sample screenshots and walkthrough video....
+  - Screenshot: Walkthrough Video : 
 ![Screenshot of Walkthrough Video](./images/Walkthrough_Vid.gif)
 - Screenshot : Initial Pages
 ![Screenshot of Initial page](./images/Initial_page.png)
