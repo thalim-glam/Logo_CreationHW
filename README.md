@@ -56,3 +56,4 @@
    ## License 
     This application was licensed under the MIT license.
   	
+  ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fthalim-glam%2FLogo_CreationHW&label=Number%20of%20Visitors%20Today&countColor=%23263759&style=flat&labelStyle=upper)
